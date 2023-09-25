@@ -3,10 +3,6 @@ const fs = require("fs");
 const markdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
 
-console.log(fs);
-console.log(markdown);
-console.log(inquirer);
-
 inquirer
   .prompt([
     { type: "input", message: "What is your Github username?", name: "name" },
