@@ -1,7 +1,7 @@
 
   # README Generator
 
-  # Recording: https://drive.google.com/file/d/1Ovez8Mw9BsfgM4cYwxO_eJMpVmbDlxwC/view
+  ## Recording: https://drive.google.com/file/d/1Ovez8Mw9BsfgM4cYwxO_eJMpVmbDlxwC/view
 
   ## Description
   Guides the user by answering questions prompts to create a README document for the user’s project. It takes the prompts by following best practices from https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide. The user will answer a series of questions about their project. After answering all the questions, the application will generate a README file for their application.
