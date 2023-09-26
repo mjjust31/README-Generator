@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
-const markdown = require("./utils/generateMarkdown");
 const inquirer = require("inquirer");
+const markdown = require("./generateMarkdown");
 
 const questions = [
   { type: "input", message: "What is your Github username?", name: "name" },
@@ -20,21 +20,13 @@ const questions = [
     message: "Please write a short description of your project",
     name: "description",
   },
-  // {
-  //   type: "checkbox",
-  //   message: "What kind of license should your project have?",
-  //   name: "license",
-  //   choices: [
-  //     "MIT",
-  //     "Apache",
-  //     "GNU General Public",
-  //     "Boost Software",
-  //     "Creative Commons Zero",
-  //     "Mozilla Public",
-  //     "The Unilicense",
-  //   ],
-  //   default: "MIT",
-  // },
+  {
+    type: "checkbox",
+    message: "What kind of license should your project have?",
+    name: "license",
+    choices: ["MIT", "mpl-2-0", "unlicense", "apache-2-0"],
+    default: "MIT",
+  },
   {
     type: "input",
     message: "What command should be run to install dependencies?",
@@ -63,6 +55,7 @@ const questions = [
 // const questions = [];
 
 // // TODO: Create a function to write README file
+console.log(markdown.generateMarkdown);
 
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
@@ -77,9 +70,11 @@ function writeToFile(fileName, data) {
 // // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((data) => {
-    const markdown = require("./utils/generateMarkdown");
     const markdownData = markdown.generateMarkdown(data);
+    console.log(markdownData);
     writeToFile("README.md", markdownData);
+
+    // console.log(data);
   });
 }
 
