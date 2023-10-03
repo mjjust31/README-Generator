@@ -1,25 +1,24 @@
 
-  # ernie
+  # undefined
 
   ## Description
-  la
+  undefined
   
   ## Installation
-  npm i
+  undefined
 
   ## Usage
-  stuff
+  undefined
   
   ## Contributing
-  redo
+  undefined
   
   ## Tests
-  npm
+  undefined
   
   ## License
-
-    This project is licensed under the ([![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)) license. Click [here]([License](https://opensource.org/licenses/)) for more information.
+    This project is licensed under the  license. Click [here][License](https://opensource.org/licenses/) for more information.
 
   ## Questions
-  For any questions, please contact me at mj.
+  For any questions, please contact me at undefined.
   

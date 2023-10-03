@@ -1,13 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if ("MIT") {
-    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-  } else if ("mpl-2-0") {
+  console.log(license);
+  if (license === "MIT") {
+    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+  } else if (license === "mpl-2-0") {
     return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
-  } else if ("unlicense") {
+  } else if (license === "unlicense") {
     return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
-  } else if ("apache-2-0") {
+  } else if (license === "apache-2-0") {
     return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
   } else {
     return "";
@@ -31,12 +32,10 @@ function renderLicenseSection(license) {
   if (license) {
     // Return the license section with the license value
     return `## License
-
-    This project is licensed under the (${renderLicenseBadge(
+    This project is licensed under the ${renderLicenseBadge(
+      license)} license. Click [here]${renderLicenseLink(
       license
-    )}) license. Click [here](${renderLicenseLink(
-      license
-    )}) for more information.`;
+    )} for more information.`;
   } else {
     return "";
   }
@@ -45,28 +44,39 @@ function renderLicenseSection(license) {
 // // TODO: Create a function to generate markdown for README
 
 const generateMarkdown = function (data) {
+  const {
+    email,
+    ProjectName,
+    description,
+    license,
+    dependencies,
+    test,
+    about,
+    contributing,
+  } = data;
+
   return `
-  # ${data.ProjectName}
+  # ${ProjectName}
 
   ## Description
-  ${data.description}
+  ${description}
   
   ## Installation
-  ${data.dependencies}
+  ${dependencies}
 
   ## Usage
-  ${data.about}
+  ${about}
   
   ## Contributing
-  ${data.contributing}
+  ${contributing}
   
   ## Tests
-  ${data.test}
+  ${test}
   
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(license)}
 
   ## Questions
-  For any questions, please contact me at ${data.email}.
+  For any questions, please contact me at ${email}.
   `;
 };
 
