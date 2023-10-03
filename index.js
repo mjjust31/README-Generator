@@ -28,7 +28,7 @@ const questions = [
     default: "MIT",
     validate: function (input) {
       const done = this.async();
-      if (input === "") {
+      if (input.length === 0) {
         done("you need to select your license!");
         return;
       }

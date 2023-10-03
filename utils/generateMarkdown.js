@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
   console.log(license);
   if (license === "MIT") {
-    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+    return `![![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   } else if (license === "mpl-2-0") {
     return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
   } else if (license === "unlicense") {
@@ -32,9 +32,7 @@ function renderLicenseSection(license) {
   if (license) {
     // Return the license section with the license value
     return `## License
-    This project is licensed under the ${renderLicenseBadge(
-      license)} license. Click [here]${renderLicenseLink(
-      license
+    This project is licensed under the ${renderLicenseBadge(license)} license. Click [here]${renderLicenseLink(license
     )} for more information.`;
   } else {
     return "";
@@ -73,7 +71,7 @@ const generateMarkdown = function (data) {
   ## Tests
   ${test}
   
-  ${renderLicenseSection(license)}
+  ${renderLicenseSection({license})}
 
   ## Questions
   For any questions, please contact me at ${email}.
