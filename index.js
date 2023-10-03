@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const markdown = require("./generateMarkdown");
+const markdown = require("./utils/generateMarkdown");
 
 const questions = [
   { type: "input", message: "What is your Github username?", name: "name" },
@@ -72,7 +72,7 @@ function init() {
   inquirer.prompt(questions).then((data) => {
     const markdownData = markdown.generateMarkdown(data);
     console.log(markdownData);
-    writeToFile("README.md", markdownData);
+    writeToFile("./example/README.md", markdownData);
 
     // console.log(data);
   });
