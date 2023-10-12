@@ -1,24 +1,24 @@
 
-  # undefined
+  # stuff
 
   ## Description
-  undefined
+  stuff
   
   ## Installation
-  undefined
+  npm i
 
   ## Usage
-  undefined
+  stuff
   
   ## Contributing
-  undefined
+  stuff
   
   ## Tests
-  undefined
+  npm
   
   ## License
     This project is licensed under the  license. Click [here][License](https://opensource.org/licenses/[object Object]) for more information.
 
   ## Questions
-  For any questions, please contact me at undefined.
+  For any questions, please contact me at mj.justmann@gmail.com.
   
