@@ -1,11 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
-const inquirer = require("inquirer");
+// const inquirer = require("inquirer");
 const markdown = require("./utils/generateMarkdown");
-const path = require("path");
+// const path = require("path");
 const promptUser = require("./utils/inquirer");
-
-
 
 
 function writeToFile(fileName, data) {
