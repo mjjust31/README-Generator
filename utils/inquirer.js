@@ -14,7 +14,7 @@ function promptUser() {
     {
       type: "input",
       message: "What is your project's name?",
-      name: "ProjectName",
+      name: "projectName",
     },
     {
       type: "input",
@@ -24,7 +24,7 @@ function promptUser() {
     {
       type: "checkbox",
       message: "What kind of license should your project have?",
-      name: "license",
+      name: "userSelectedLicense",
       choices: ["MIT", "mpl-2-0", "unlicense", "apache-2-0"],
       default: "MIT",
       validate: function (input) {

@@ -14,6 +14,7 @@ function renderLicenseBadge(license) {
     return "";
   }
 }
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
@@ -24,7 +25,6 @@ function renderLicenseLink(license) {
     return "";
   }
 }
-
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -42,40 +42,61 @@ function renderLicenseSection(license) {
 // // TODO: Create a function to generate markdown for README
 
 const generateMarkdown = function (data) {
+  console.log(data);
   const {
     email,
-    ProjectName,
+    projectName,
     description,
-    license,
+    userSelectedLicense,
     dependencies,
     test,
     about,
     contributing,
   } = data;
 
-  return `
-  # ${ProjectName}
+  const readMe = `
+# ${projectName}
 
-  ## Description
-  ${description}
-  
-  ## Installation
-  ${dependencies}
+## Description
+${description}
 
-  ## Usage
-  ${about}
-  
-  ## Contributing
-  ${contributing}
-  
-  ## Tests
-  ${test}
-  
-  ${renderLicenseSection(license)}
+## Table of Contents
 
-  ## Questions
-  For any questions, please contact me at ${email}.
-  `;
+- [Installation](#installation)
+
+- [Usage](#usage)
+
+- [Contributing](#contributing)
+
+- [Tests](#tests)
+
+- [License](#license)
+
+- [Questions](#questions)
+  
+## Installation
+${dependencies}
+
+## Usage
+${about}
+  
+## Contributing
+${contributing}
+  
+## Tests
+${test}
+
+## License
+
+${renderLicenseSection(`${userSelectedLicense}`)}\n
+This project is licensed under ${userSelectedLicense}
+
+
+## Questions
+For any questions, please contact me at ${email}.
+`;
+
+  return readMe;
 };
 
 module.exports = { generateMarkdown };
