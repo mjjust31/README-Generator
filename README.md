@@ -1,6 +1,8 @@
 # README Generator
 
-## Recording of the generator README file: 
+## Recording of the generator README file:
+[Recording Link](https://drive.google.com/file/d/1pDUzQkDwlS8F3tV-sCvn9kU4gGTSGNk1/view "Recording")
+
 
 ## Description
 
@@ -28,7 +30,7 @@ Guides the user by answering questions prompts to create a README document for t
 
 ## Usage
 
-  The user needs to know that if they would like the license badge, this is still being worked on to provide the actual image of the badge. Until this is fixed within the code, the user should review the final README project before committing any changes.
+  The user should use this generator to start the beginning of their README file. This way, the user can have a basic REAMDE file and track their notes as they continue to build their projects. 
 
 ## Contributing
 
