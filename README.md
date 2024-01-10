@@ -21,6 +21,7 @@ Guides the user by answering questions prompts to create a README document for t
 - [License](#license)
 
 - [Questions](#questions)
+
 ## Installation
 
   npm i
@@ -41,7 +42,7 @@ Guides the user by answering questions prompts to create a README document for t
 
 ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
- This project is licensed under the MIT License for more information, you can visit here: (https://opensource.org/licenses/MIT)
+ This project is licensed under the MIT License for more information, you can visit here: [MIT License](https://opensource.org/licenses/MIT)
 
 ## Questions
 
@@ -50,4 +51,7 @@ For any questions, please contact me at mj.justmann@gmail.com.
 ## Resources used for the project:
 
 1. https://opensource.org/licenses/
-2. https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba 3.https://www.npmjs.com/package/inquirer/v/8.2.4
+2. https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba 
+3.https://www.npmjs.com/package/inquirer/v/8.2.4
+4. https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f
+
