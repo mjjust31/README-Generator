@@ -21,7 +21,7 @@ function init() {
   promptUser().then((data) => {
     const markdownData = markdown.generateMarkdown(data);
     // console.log(markdownData);
-    writeToFile("./example/README.md", markdownData);
+    writeToFile("./generated-README/README.md", markdownData);
     // console.log(data);
   });
 }

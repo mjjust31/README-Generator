@@ -54,7 +54,7 @@ const generateMarkdown = function (data) {
     contributing,
   } = data;
 
-  const readMe = `
+  const content = `
 # ${projectName}
 
 ## Description
@@ -96,7 +96,7 @@ This project is licensed under ${userSelectedLicense}
 For any questions, please contact me at ${email}.
 `;
 
-  return readMe;
+  return content;
 };
 
 module.exports = { generateMarkdown };
